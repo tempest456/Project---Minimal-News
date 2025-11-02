@@ -1,0 +1,16 @@
+{% for news in news_obj %}
+{% if user.is_subscribed(news.category) %}
+<h2>{{ news.headline }}</h2>
+<p>{{ news.summarized_body }}</p>
+{% endif %}
+{% endfor %}
+
+{% if corona_stat and user.corona_update %}
+<p>
+<strong>Total tests conducted:</strong>{{corona_stat.get('tested_total')}}<br>
+<strong>Positive cases:</strong>{{corona_stat.get('tested_positive')}}<br>
+<strong>Negative cases:</strong>{{corona_stat.get('tested_negative')}}<br>
+<strong>Recovery:</strong>{{corona_stat.get('recovered')}}<br>
+<strong>Deaths:</strong>{{corona_stat.get('deaths')}}<br>
+<p>
+{% endif %}

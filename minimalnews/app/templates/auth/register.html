@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Minimal News - Register</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}" />
+  <!-- <link rel="stylesheet" href="../../static/css/register.css" /> -->
+</head>
+
+<body class="registerbody">
+  <!-- Header -->
+  <header id="header">
+    <nav class="left">
+      <a href="#menu"><span>Menu</span></a>
+    </nav>
+    <a href="{{ url_for('main.index') }}" class="logo">Minimal News</a>
+
+  </header>
+
+  <div class="card" style="width: 40%; margin: auto ;margin-top:10px;">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{category}}">
+      {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+  </div>
+  <div class="logincontainer">
+
+    <a href="{{ url_for('main.index') }}" class="img"><img src="../../static/images/logosq1.png" class="logosq"></a>
+
+    <div id="login">
+
+      <form action="" method="POST">
+        <fieldset class="clearfix">
+          <hr style="width:35%;margin-left:32%">
+          <hr style="width:75%;margin-left:12.5%">
+          <p>
+          <h2><i class="fa fa-envelope"></i><br>Email</h2> <br><input type="email" name="email" placeholder="example@mail.com"
+            required></p>
+          <hr style="width:75%;margin-left:12.5%">
+          <p>
+          <h2><i class="fa fa-check-square"></i><br>Categories</h2>
+          </p>
+          <div class="checkcategories">
+            <input type="checkbox" id="Nepal" name="category" value="nepal" checked>
+            <label for="Nepal">
+              <h3>Nepal</h3>
+            </label>
+            <input type="checkbox" id="World" name="category" value="world">
+            <label for="World">
+              <h3>World</h3>
+            </label><br>
+            <input type="checkbox" id="Finance" name="category" value="business">
+            <label for="Finance">
+              <h3>Finance</h3>
+            </label>
+            <input type="checkbox" id="Sports" name="category" value="sports">
+            <label for="Sports">
+              <h3>Sports</h3>
+            </label>
+            <input type="checkbox" id="Entertainment" name="category" value="entertainment">
+            <label for="Entertainment">
+              <h3>Entertainment</h3>
+            </label>
+            <input type="checkbox" id="Technology" name="category" value="science-technology">
+            <label for="Technology">
+              <h3>Technology</h3>
+            </label>
+          </div>
+          <hr style="width:75%;margin-left:12.5%">
+
+          <p>
+          <h2><i class="fa fa-clock-o"></i><br>Preferred Time</h2>
+          </p>
+          <div class="preftime">
+            <input type="radio" id="Morning" name="time" value="morning" checked>
+            <label for="Morning">
+              <h3>Morning</h3>
+            </label>
+            <input type="radio" id="Noon" name="time" value="noon">
+            <label for="Noon">
+              <h3>Noon</h3>
+            </label>
+            <input type="radio" id="Evening" name="time" value="evening">
+            <label for="Evening">
+              <h3>Evening</h3>
+            </label>
+          </div>
+          <hr style="width:75%;margin-left:12.5%">
+
+          <p>
+          <h2><i class="fa fa-newspaper-o"></i><br>Extra</h2>
+          </p>
+          <input type="checkbox" id="Corona" name="category_extra">
+          <label for="Corona">
+            <h3>COVID-19 Updates</h3>
+          </label>
+          <p><input type="submit" value="Register"></p>
+          <hr style="width:75%;margin-left:12.5%">
+          <hr style="width:35%;margin-left:32%">
+
+        </fieldset>
+
+      </form>
+
+      <p>Need help? Contact us at: &nbsp; <a href="http://www.gmail.com">minimalnews@gmail.com <i
+            class="fa fa-send"></i></a></p>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

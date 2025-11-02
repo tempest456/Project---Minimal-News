@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Minimal News</title>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',
+    filename='css/main.css') }}"
+    />
+  </head>
+  <body class="subpage">
+    <!-- Header -->
+    <header id="header">
+      <nav class="left">
+        <a href="#menu"><span>Menu</span></a>
+      </nav>
+      <a href="{{ url_for('main.index')}}" class="logo">Minimal News</a>
+      <nav class="right">
+        <a href="{{ url_for('auth.register') }}" class="button alt">Sign Up</a>
+      </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="{{ url_for('main.index') }}">Home</a></li>
+        <li><a href="{{ url_for('main.about') }}">About</a></li>
+      </ul>
+      <ul class="actions vertical">
+        <li><a href="#" class="button fit">Sign Up</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <section id="main" class="wrapper">
+      <div class="inner">
+        <header class="align-center">
+          <h1>About</h1>
+          <p>Minimal News Newsletter Service</p>
+        </header>
+        <div class="image fit">
+          <img src="../static/images/pic05.jpg" alt="" />
+        </div>
+        <p>
+          Today's era is truly an era of information overload with News not
+          being an exception. It is an important part of people's lives. There
+          are so many sites and applications regulating news online. So, it is
+          an equally important and difficult task to select the most promising
+          and reliable news source on the Internet. Even with a good news
+          source, we have to bear with all the advertisements and pop-ups which
+          can be annoying and can ruin our reading experience. This is where
+          MINIMAL NEWS steps in.
+        </p>
+        <p>
+          MINIMAL NEWS is a web news service that takes an approach different
+          from the mainstream media focusing on ‘the need to know’, not
+          everything, but ‘what is relevant’. A simple registration will deliver
+          minimal curated news to the users’ right to their inbox. No more ads,
+          no more getting stuck in an infinite scroll or a rabbit hole of
+          hyperlinks so that the user can give their precious attention to the
+          tasks that require it while still staying informed.
+        </p>
+        <p>
+          In this era of ‘too much news’, MINIMAL NEWS focuses only on the
+          necessary and specific news that a reader wants. Instead of falling on
+          a rabbit hole and wasting time on the unnecessary, irrelevant news, a
+          reader has the privilege of reading what he wants to read. This will
+          not only save time but also prevent the reader to get mentally
+          affected by the not needed news.
+        </p>
+      </div>
+    </section>
+    <!-- Two -->
+    <section id="two" class="wrapper style1 special">
+      <div class="inner">
+        <header>
+          <h2>Our Team</h2>
+          <p>Kathmandu University</p>
+        </header>
+        <div class="flex flex-4">
+          <div class="box person">
+            <div class="image round">
+              <img src="../static/images/team/team.jpg" alt="Person 1" />
+            </div>
+            <h3>Aashutosh Aryal</h3>
+            <p>What to write here</p>
+          </div>
+          <div class="box person">
+            <div class="image round">
+              <img src="../static/images/team/team.jpg" alt="Person 2" />
+            </div>
+            <h3>Sandesh Dahal</h3>
+            <p>What to write here</p>
+          </div>
+          ../static/
+          <div class="box person">
+            <div class="image round">
+              <img src="../static/images/team/team.jpg" alt="Person 3" />
+            </div>
+            <h3>Shusan Khatiwada</h3>
+            <p>What to write here</p>
+          </div>
+          <div class="box person">
+            <div class="image round">
+              <img src="../static/images/team/team.jpg" alt="Person 4" />
+            </div>
+            <h3>Sameer J. Subedi</h3>
+            <p>What to write here</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <h2>Get In Touch</h2>
+        <ul class="actions">
+          <li>
+            <span class="icon fa-phone"></span>
+            <a href="#">(+977) 9841 123456</a>
+          </li>
+          <li>
+            <span class="icon fa-envelope"></span>
+            <a href="#">minimalnews@gmail.com</a>
+          </li>
+          <li>
+            <span class="icon fa-map-marker"></span> Baneshwor-10, Kathmandu,
+            Nepal
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        &copy; Minimal News.
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
